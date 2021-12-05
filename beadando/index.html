@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="myScript.js"></script>
+    <title>Kiss Máté NXYCH1 Beadandó</title>
+  </head>
+  <body style="background-color: rgb(245, 245, 245)">
+    <div class="container">
+      <div class="box">
+        <p id="szoveg">
+          Ezen a weboldalon sokféle dolog látható,de ez most egy olyan szöveg
+          lesz ami belátást ad néhány gondolatra az autók világából.<br />
+          Maga a weboldal egy beadandónak készül. Lássuk csak:<br />
+        </p>
+        <q id="hidden" style="display: none">
+          Az autó (elnevezése az automobile rövidítése, a görög auto-: ön-
+          előtagból és a latin mobilis: mozgó, mozgatható szóból származik)
+          olyan földön közlekedő, kerekeken guruló, emberek közlekedésére
+          alkalmas jármű, amely saját hajtóművel önerőből képes mozgásra, nem
+          egy másik jármű vagy állat mozgatja.Hétköznapi jelentésében az autó a
+          gépkocsi, egy kerekeken guruló, saját motorja által hajtott gépjármű.
+          A legtöbb meghatározás olyan szabályszerűségekkel írja le, mint amit
+          elsősorban aszfaltútra terveztek, 1-8 utast szállíthat, jellemzően
+          négy kerékkel rendelkezik, és felépítése a személyszállításra inkább
+          alkalmassá teszi, mint áruszállításra.[1] Mindazonáltal a leírások
+          pontossága nem tökéletes az eltérő feladatokra létrehozott, számos
+          különböző gépkocsitípus miatt. Az autó viszonylag gyorsan kilépett az
+          egyszerű szárazföldi jármű szerepköréből (szállítás, utazás), amit
+          csak közlekedésre használnak, és jelentős kulturális, valamint
+          emocionális értékkel rendelkező, életmódot befolyásoló
+          státuszszimbólummá emelkedett, kiváltképp az átlagosnál igényesebb
+          vagy gyorsabb változatai. Hamar megjelent a motorsportban is, a
+          feltalálását követő pár évtizeden belül már autóversenyeket is
+          rendeztek. Az autózás elterjedése maga után vonta a jobb minőségű
+          úthálózatok kiépítését is, amelyek általánosságban növelték az utazás
+          komfortját, és csökkentették annak idejét.
+        </q>
+        - Wikipédia autók
+        <button type="button" onclick="hideShow()">Toggle hidden text</button>
+      </div>
+      <div class="box">
+        <table title="Autók" class="Arial">
+          <tr>
+            <th>Gyártó</th>
+            <th>Típus</th>
+            <th>Kategória</th>
+            <th>Nézzük meg!</th>
+          </tr>
+          <tr>
+            <td>BMW</td>
+            <td>G30</td>
+            <td>Felső</td>
+            <td>
+              <a
+                href="https://www.bmw.hu/hu/all-models/5-series/sedan/2021/bmw-5-series-technical-data.html"
+                >Megtekintés!</a
+              >
+            </td>
+          </tr>
+          <tr>
+            <td>Volkswagen</td>
+            <td>B8</td>
+            <td>Közép</td>
+            <td><a href="https://www.volkswagen.hu/passat">Megtekintés!</a></td>
+          </tr>
+          <tr>
+            <td>Suzuki</td>
+            <td>A2L</td>
+            <td>Alsó</td>
+            <td>
+              <a href="https://en.wikipedia.org/wiki/Suzuki_Swift"
+                >Megtekintés!</a
+              >
+            </td>
+          </tr>
+          <tr>
+            <td>Audi</td>
+            <td>C8</td>
+            <td>Felső</td>
+            <td>
+              <a href="https://wwww.audi.hu/a6/a6-limousine/attekintes"
+                >Megtekintés!</a
+              >
+            </td>
+          </tr>
+          <tr>
+            <td>Skoda</td>
+            <td>B8</td>
+            <td>Közép</td>
+            <td>
+              <a href="https://www.skoda.hu/superb/superb">Megtekintés!</a>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="box flex">
+        <div>
+          <h3>Milyen autót szeretnénk ha megtehetnénk:</h3>
+          <p class="Arial">Ide kell írni milyen autót szeretnénk:</p>
+          <input type="text" id="carName" />
+          <input type="button" onclick="listAdd()" value="Submit" />
+          <ul id="cars"></ul>
+        </div>
+        <img src="audi2.jpg" alt="Szalon" />
+      </div>
+      <div class="box animation">
+        <img id="audi1" class="center" src="audi1.gif" alt="audi" />
+        <script>
+          audi(true);
+        </script>
+      </div>
+      <div class="box">
+        <form name="myForm">
+          <p style="color: red">A csillaggal jelölt mezők kötelezők!</p>
+          <label for="lname"
+            >Vezetéknév: <span style="color: red">*</span></label
+          ><br />
+          <input
+            type="text"
+            id="lname"
+            name="lname"
+            class="width100"
+            title="Kezdődjön nagybetűvel és ne tartalmazzon szóközt!"
+          /><br />
+          <label for="fname"
+            >Keresztnév: <span style="color: red">*</span></label
+          ><br />
+          <input
+            type="text"
+            id="fname"
+            name="fname"
+            class="width100"
+            title="Kezdődjön nagybetűvel és ne tartalmazzon szóközt!"
+          /><br />
+          <label for="age">Kor: <span style="color: red">*</span></label
+          ><br />
+          <input
+            type="number"
+            id="age"
+            name="age"
+            min="0"
+            max="110"
+            class="width100"
+            title="0-110"
+          /><br />
+          <label for="sex">Neme:</label><br />
+          <select id="sex" name="sex" class="width100">
+            <option value="Férfi">Férfi</option>
+            <option value="Nő">Nő</option>
+            <option value="Nem!">Nem!</option>
+            <option value="Dehogyisnem!">Dehogyisnem!</option></select
+          ><br />
+          <label for="password">Jelszó: <span style="color: red">*</span></label
+          ><br />
+          <input
+            type="password"
+            id="password"
+            name="password"
+            class="width100"
+            title="Minimum 8 karakter hosszú, tartalmazzon legalább 1db kisbetűt, nagybetűt és számot!"
+          /><br />
+          <label for="favanimal">Háziállat neve:</label><br />
+          <input
+            type="text"
+            id="favanimal"
+            name="favanimal"
+            class="width100"
+          /><br />
+          <label>Mennyire jó a weboldal?</label><br />
+          <div style="margin-bottom: 16px">
+            <input
+              type="radio"
+              id="radio1"
+              name="status"
+              value="Nagyon rossz"
+            />
+            <label for="radio1">Nagyon rossz</label><br />
+            <input type="radio" id="radio2" name="status" value="Rossz" />
+            <label for="radio2">Rossz</label><br />
+            <input type="radio" id="radio3" name="status" value="Nem tudom" />
+            <label for="radio3">Nem tudom</label><br />
+            <input type="radio" id="radio4" name="status" value="Jó" />
+            <label for="radio4">Jó</label><br />
+            <input type="radio" id="radio5" name="status" value="Nagyon jó" />
+            <label for="radio5">Nagyon jó</label><br />
+          </div>
+          <label for="email"
+            >E-mail cím: <span style="color: red">*</span></label
+          ><br />
+          <input type="text" id="email" name="email" class="width100" /><br />
+          <label for="color">Adj meg egy színt!</label><br />
+          <input type="color" id="color" class="width100" /><br />
+          <label for="date">Adj meg egy dátumot!</label><br />
+          <input type="date" id="date" class="width100" /><br />
+          <input
+            type="button"
+            onclick="validate()"
+            value="Submit"
+            class="width100 button"
+          />
+        </form>
+      </div>
+    </div>
+    <img id="audi2" class="center" src="audi1.jpg" alt="audi" />
+    <script>
+      audi2(true);
+    </script>
+    <img id="audi3" class="center" src="audi2.jpg" alt="audi" />
+    <script>
+      audi3(true);
+    </script>
+  </body>
+</html>

@@ -1,0 +1,103 @@
+.container {
+  max-width: 1300px;
+  margin: 0 auto;
+  padding: 40px 80px;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+.container .box {
+  background: #ffffff;
+}
+.box {
+  padding: 20px 50px;
+  border-radius: 10px;
+  box-shadow: 0px 1px 5px 3px rgba(0, 0, 0, 0.12);
+  margin-top: 20px;
+}
+table {
+  margin: 0 auto;
+}
+table th,
+table tr {
+  text-align: left;
+  width: 150px;
+}
+table tr:nth-child(even) {
+  background: rgb(241, 241, 241);
+}
+tr:nth-child(odd) {
+  background: #fff;
+}
+.flex {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+.flex img {
+  max-width: 500px;
+  border-radius: 10px;
+  box-shadow: 0px 1px 5px 3px rgba(0, 0, 0, 0.12);
+}
+.animation {
+  display: flex;
+  justify-content: center;
+  position: relative;
+  height: 391.36px;
+}
+.animation img {
+  width: 700px;
+  height: 391.36px;
+}
+#audi1 {
+  position: absolute;
+}
+#audi2 {
+  position: absolute;
+  width: 200px;
+}
+#audi3 {
+  position: absolute;
+  width: 200px;
+}
+.box form {
+  margin: 0 auto;
+  max-width: 400px;
+}
+.box form .width100 {
+  width: 100%;
+  margin: 0 0;
+  padding: 0 0;
+  box-sizing: border-box;
+  height: 30px;
+  margin-bottom: 16px;
+  padding: 0 16px;
+  border-radius: 6px;
+  border: 1px solid #b1b1b1;
+  outline: none !important;
+}
+.button {
+  padding: 0 0;
+  border: none;
+  outline: none;
+  height: 50px !important;
+  color: white;
+  background-color: #17164f;
+  font-weight: 700;
+  font-size: 22px;
+  border-radius: 6px;
+}
+.button:hover {
+  background-color: #212072;
+  cursor: pointer;
+}
+#szoveg::first-line {
+  color: rgb(0, 211, 140);
+}
+input[type="text"] {
+  color: rgb(0, 17, 255);
+}
+.box:nth-child(1) {
+  text-decoration: underline;
+}
+a {
+  color: rgb(251, 73, 103);
+}
